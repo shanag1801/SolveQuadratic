@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="b = "
+        android:textColor="#FFB6B9"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.178"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.441"
+        tools:ignore="HardcodedText,TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:text="a = "
+        android:textColor="#FFB6B9"
+        android:textSize="30sp"
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.177"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.257"
+        tools:ignore="HardcodedText,TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="c = "
+        android:textColor="#FFB6B9"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.178"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.605"
+        tools:ignore="HardcodedText,TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="379dp"
+        android:layout_height="81dp"
+        android:fontFamily="cursive"
+        android:gravity="center"
+        android:text="Quadratic equation Calculator: "
+        android:textColor="#B1B2FF"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.062"
+        tools:ignore="HardcodedText,TextContrastCheck,TextSizeCheck" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="129dp"
+        android:layout_height="69dp"
+        android:backgroundTint="#AAC4FF"
+        android:fontFamily="cursive"
+        android:text="Solve"
+        android:textSize="40sp"
+        android:onClick="solve"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.858"
+        tools:ignore="HardcodedText,TextSizeCheck,TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/editTextNumber"
+        android:layout_width="92dp"
+        android:layout_height="59dp"
+        android:ems="10"
+        android:onClick="go1"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.25"
+        tools:ignore="Autofill,LabelFor,SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/editTextNumber2"
+        android:layout_width="91dp"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:onClick="go2"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.584"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.44"
+        tools:ignore="Autofill,LabelFor,SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/editTextNumber3"
+        android:layout_width="88dp"
+        android:layout_height="57dp"
+        android:ems="10"
+        android:inputType="number"
+        android:onClick="go3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.576"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.606"
+        tools:ignore="Autofill,LabelFor,SpeakableTextPresentCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
