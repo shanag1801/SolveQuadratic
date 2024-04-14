@@ -17,10 +17,27 @@
         android:textSize="31sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.804"
+        app:layout_constraintHorizontal_bias="0.78"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.858"
+        app:layout_constraintVertical_bias="0.776"
+        tools:ignore="HardcodedText,TextSizeCheck,TextContrastCheck" />
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="129dp"
+        android:layout_height="69dp"
+        android:backgroundTint="#AAC4FF"
+        android:fontFamily="cursive"
+        android:onClick="solve"
+        android:text="Solve"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.152"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.776"
         tools:ignore="HardcodedText,TextSizeCheck,TextContrastCheck" />
 
     <TextView
@@ -90,23 +107,6 @@
         app:layout_constraintVertical_bias="0.062"
         tools:ignore="HardcodedText,TextContrastCheck,TextSizeCheck" />
 
-    <Button
-        android:id="@+id/btn"
-        android:layout_width="129dp"
-        android:layout_height="69dp"
-        android:backgroundTint="#AAC4FF"
-        android:fontFamily="cursive"
-        android:onClick="solve"
-        android:text="Solve"
-        android:textSize="40sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.177"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.858"
-        tools:ignore="HardcodedText,TextSizeCheck,TextContrastCheck" />
-
     <EditText
         android:id="@+id/et1"
         android:layout_width="92dp"
@@ -151,5 +151,17 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.606"
         tools:ignore="Autofill,LabelFor,SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="141dp"
+        android:layout_height="71dp"
+        android:text="solution/s"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.94" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
