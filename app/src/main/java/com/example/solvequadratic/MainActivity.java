@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         si = getIntent();
         double root1 = si.getDoubleExtra("root1", 1);
         double root2 = si.getDoubleExtra("root2", 1);
+        finish();
         tv10.setText("The solution/s are: " + root1 + ", " + root2);
 
     }
