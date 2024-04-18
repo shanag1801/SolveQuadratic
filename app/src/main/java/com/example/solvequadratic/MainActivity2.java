@@ -5,29 +5,29 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity2 extends AppCompatActivity {
     TextView tv1, tv2;
     Button btn3;
-    Intent gi;
     double root1, root2;
+    int a, b, c;
 
 
     @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main2);
         tv1 = findViewById(R.id.textView5);
         tv2 = findViewById(R.id.textView6);
         btn3 =  findViewById(R.id.button);
-        gi = getIntent();
-        int a = gi.getIntExtra("a", 0);
-        int b = gi.getIntExtra("b", 0);
-        int c = gi.getIntExtra("c", 0);
-        finish();
-
+        Bundle gi = getIntent().getExtras();
+        if(gi != null){
+            a = gi.getInt("a");
+            b = gi.getInt("b");
+            c = gi.getInt("c");
+        }
         double discriminant = b * b - 4 * a * c;
         if (discriminant > 0) {
             root1 = (-b + Math.sqrt(discriminant)) / (2 * a);
@@ -46,10 +46,10 @@ public class MainActivity2 extends AppCompatActivity {
     }
 
     public void back(View view) {
+        Intent gi = new Intent(this, MainActivity.class);
         gi.putExtra("root1", root1);
         gi.putExtra("root2", root2);
-        setResult(1, gi);
-        finish();
+        startActivity(gi);
     }
 
 }

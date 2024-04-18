@@ -16,11 +16,10 @@ public class MainActivity extends AppCompatActivity {
     EditText et1, et2, et3;
     Button btn, btn2;
     TextView tv10;
-    int a, b, c;
     Random rnd = new Random();
     Intent si;
 
-    @SuppressLint({"MissingInflatedId", "SetTextI18n"})
+    @SuppressLint("MissingInflatedId")
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -30,12 +29,16 @@ public class MainActivity extends AppCompatActivity {
         btn = findViewById(R.id.btn);
         btn2 = findViewById(R.id.btn2);
         tv10 = findViewById(R.id.textView10);
-        si = getIntent();
-        double root1 = si.getDoubleExtra("root1", 1);
-        double root2 = si.getDoubleExtra("root2", 1);
-        finish();
-        tv10.setText("The solution/s are: " + root1 + ", " + root2);
-
+    }
+    @SuppressLint("SetTextI18n")
+    protected void onResume(){
+        super.onResume();
+        Bundle i = getIntent().getExtras();
+        if(i != null){
+            double root1 = i.getDouble("root1");
+            double root2 = i.getDouble("root2");
+            tv10.setText("The solution/s are: " + root1 + ", " + root2);
+        }
     }
 
     public int a() {
@@ -51,20 +54,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void solve(View view) {
-        a = a();
-        b = b();
-        c = c();
-        si = new Intent(this, MainActivity.class);
-        si.putExtra("a", a);
-        si.putExtra("b", b);
-        si.putExtra("c", c);
-        startActivityForResult(si, 0);
-
+        si = new Intent(this, MainActivity2.class);
+        si.putExtra("a", a());
+        si.putExtra("b", b());
+        si.putExtra("c", c());
+        startActivity(si);
     }
 
     public void random(View view) {
-        et1.setText(rnd.nextInt());
-        et2.setText(rnd.nextInt());
-        et3.setText(rnd.nextInt());
+        et1.setText(String.valueOf(rnd.nextInt(10)));
+        et2.setText(String.valueOf(rnd.nextInt(10)));
+        et3.setText(String.valueOf(rnd.nextInt(10)));
     }
 }
